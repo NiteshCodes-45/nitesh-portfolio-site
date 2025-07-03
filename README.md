@@ -1,12 +1,67 @@
-# React + Vite
+# Nitesh Portfolio Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio – built using **React**, **Vite**, and **Tailwind CSS**.  
+This site showcases my featured work, frontend skills, and services I offer.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 [niteshcodes-45.github.io/nitesh-portfolio-site](https://niteshcodes-45.github.io/nitesh-portfolio-site)
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React (with Hooks)
+- ⚡ Vite (for fast builds)
+- 🎨 Tailwind CSS (utility-first styling)
+- ✨ Framer Motion (for animations)
+- 📦 React Icons (custom icons)
+- 🧾 GitHub Pages (deployment)
+
+<!-- ## Screenshots
+
+| Desktop | Mobile |
+|--------|--------|
+| ![Desktop](./screenshots/desktop.png) | ![Mobile](./screenshots/mobile.png) |
+
+> Replace the paths above with your actual screenshots (e.g. `/public/screenshots/desktop.png`) -->
+
+## Features
+
+- Featured work with lightbox previews
+- Responsive UI grid
+- Dark mode support
+- Animated transitions
+- Smooth scroll navigation
+- Custom section for services with tech stack badges
+
+## Project Structure
+
+├── public/
+│ └── logo.svg
+├── src/
+│ ├── components/
+│ ├── assets/
+│ ├── App.jsx
+│ └── main.jsx
+├── vite.config.js
+└── README.md
+
+## Installation & Local Dev
+
+```bash
+# Clone the repo
+git clone https://github.com/NiteshCodes-45/nitesh-portfolio-site.git
+
+# Navigate into it
+cd nitesh-portfolio-site
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build the project
+npm run build
+
+# Deploy
+npm run deploy

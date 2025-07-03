@@ -31,7 +31,7 @@ export default function Portfolio() {
     <main className="min-h-screen px-6 pb-0 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
       {/* Dark Mode Toggle */}
       <div className="flex justify-between items-center max-w-6xl mx-auto mb-8 md:mb-2 pt-4">
-        <img src="/nc-logo.png" alt="NC Logo" className="h-10 w-auto" />
+        <img src="./nc-logo.png" alt="NC Logo" className="h-10 w-auto" />
         <button
           onClick={() => setDarkMode(!darkMode)}
           className="mb-2 p-1 rounded-full text-sky-600 dark:text-sky-300 hover:bg-sky-100 dark:hover:bg-gray-800 transition"
