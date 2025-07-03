@@ -12,7 +12,7 @@ export default function FeaturedWork() {
     {
       title: "Live Cricket Scoreboard",
       description: "Real-time score updates using React + Firebase.",
-      image: "/projects/live-homepage.png",
+      image: "./projects/live-homepage.png",
       link: "https://live-score-cart.vercel.app/",
       tags: ["React", "Firebase", "Tailwind"],
       type: "web",
@@ -20,16 +20,16 @@ export default function FeaturedWork() {
     {
       title: "Responsive Invoice Email Template",
       description: "HTML email built with mobile-first design.",
-      image: "/projects/full-email-template.png",
-      link: "/portfolio-templates/invoice-email-template.html",
+      image: "./projects/full-email-template.png",
+      link: "./portfolio-templates/invoice-email-template.html",
       tags: ["HTML", "Tailwind", "Email"],
       type: "email",
     },
     {
       title: "Product Launch Email Template",
       description: "Modern email template for product launches.",
-      image: "/projects/product-launch-ss.png",
-      link: "/portfolio-templates/product-launch-email-template.html",
+      image: "./projects/product-launch-ss.png",
+      link: "./portfolio-templates/product-launch-email-template.html",
       tags: ["UI", "Tailwind", "Email"],
       
     },
