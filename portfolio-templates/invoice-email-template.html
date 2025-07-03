@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Email</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="w-full max-w-xl bg-white rounded-xl shadow-md px-6 py-8 md:px-12 md:py-10">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold text-orange-500">Tax Invoice</h2>
+          <a href="#" class="text-sm text-orange-500 underline hover:text-orange-600">Download</a>
+        </div>
+
+        <!-- Logo -->
+        <div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-orange-100">
+          <img src="https://placehold.co/200x60?text=Your+Logo&font=roboto" alt="LiveScoreCart Logo" class="h-8 w-auto" />
+        </div>
+
+        <!-- Invoice Info -->
+        <div class="text-center mb-6">
+          <p class="text-sm text-gray-500">Invoice #INV-2025-0831</p>
+          <h3 class="text-lg font-semibold">Abc Xyz</h3>
+        </div>
+
+        <!-- Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm mb-6">
+            <thead class="bg-orange-100">
+              <tr>
+                <th class="py-2 px-4">Item</th>
+                <th class="py-2 px-4">Qty</th>
+                <th class="py-2 px-4">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="even:bg-gray-50">
+                <td class="py-2 px-4">Item one Description</td>
+                <td class="py-2 px-4">1</td>
+                <td class="py-2 px-4">₹1000</td>
+              </tr>
+              <tr class="even:bg-gray-50">
+                <td class="py-2 px-4">Item two Description</td>
+                <td class="py-2 px-4">1</td>
+                <td class="py-2 px-4">₹500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Summary -->
+        <div class="flex justify-between text-sm font-medium border-t pt-4">
+          <span>Subtotal</span>
+          <span>₹1500</span>
+        </div>
+        <div class="flex justify-between text-sm font-medium">
+          <span>Tax (0%)</span>
+          <span>₹0</span>
+        </div>
+        <div class="flex justify-between text-lg font-bold text-orange-500 mt-2">
+          <span>Total</span>
+          <span>₹1500</span>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="mt-4">
+          <h3 class="text-lg font-semibold text-orange-500">
+            Payment Method:
+            <span class="text-gray-700">UPI</span>
+            <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full ml-2">PAID</span>
+          </h3>
+        </div>
+
+        <!-- Terms & Conditions -->
+        <div class="mt-4 text-sm text-gray-600">
+          <p class="font-semibold">Terms & Conditions:</p>
+          <ul class="list-disc list-inside">
+            <li>All sales are final.</li>
+            <li>Payment is due within 30 days of receipt.</li>
+            <li>Late payments may incur a fee.</li>
+          </ul>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-6 text-center">
+          <a href="#" class="inline-block bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">View Invoice Online</a>  
+        </div>
+
+        <!-- Meed help & Policy -->
+        <div class="mt-6 text-sm text-gray-600">
+          <p>If you have any questions about this invoice, please contact us at <a href="mailto:abc@xyz.com" class="text-orange-500 hover:underline">abc@xyz.com</a>.</p>
+        </div>  
+
+        <!-- Contact Info
+        <div class="mt-4 text-sm text-gray-600">  
+          <p>Abc Xyz</p>
+          <p>1234 Street Name, City, State, 12345</p>
+          <p>Phone: <a href="tel:+911234567890" class="text-orange-500 hover:underline">+91 12345 67890</a></p>
+          <p>Email: <a href="mailto:abc@xyz.com" class="text-orange-500 hover:underline">abc@xyz.com</a></p>
+        </div> -->
+
+        <!-- Footer -->
+        <div class="text-center text-xs text-gray-500 mt-6">
+          © 2025 AbcXyz · <a href="#" class="text-orange-500 hover:underline">Unsubscribe</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
