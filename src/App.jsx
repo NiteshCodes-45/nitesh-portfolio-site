@@ -6,7 +6,7 @@ import Blogs from "./pages/Blogs.jsx"
 function App() {
   return (
     <>
-      <Router basename="/nitesh-portfolio-site">
+      <Router basename="/">
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/blog" element={<Blogs />} />
