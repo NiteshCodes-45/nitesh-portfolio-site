@@ -61,13 +61,13 @@ export default function Hero({ toContact }) {
                 >
                     Let's Work Together
                 </button>
-                <a
+                {/* <a
                     href="/Nitesh Chaughule.pdf"
                     target="_blank"
                     className="px-6 py-2 border border-sky-600 text-sky-600 dark:text-sky-300 dark:border-sky-400 rounded-md hover:bg-sky-100 dark:hover:bg-gray-800 transition"
                 >
                     📄 View My Resume
-                </a>
+                </a> */}
             </div>
         </section>
     );

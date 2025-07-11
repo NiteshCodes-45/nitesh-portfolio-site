@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaMoon, FaSun } from "react-icons/fa"
 import FeaturedWork from "./FeaturedWork";
 import Hero from "./hero";
 import ServiceOffered from "./ServiceOffered";
+import { Link } from "react-router-dom";
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -29,16 +30,28 @@ export default function Portfolio() {
 
   return (
     <main className="min-h-screen px-6 pb-0 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
-      {/* Dark Mode Toggle */}
-      <div className="flex justify-between items-center max-w-6xl mx-auto mb-8 md:mb-2 pt-4">
-        <img src="./nc-logo.png" alt="NC Logo" className="h-10 w-auto" />
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="mb-2 p-1 rounded-full text-sky-600 dark:text-sky-300 hover:bg-sky-100 dark:hover:bg-gray-800 transition"
-          aria-label="Toggle Dark Mode"
+      <div className="flex justify-between items-center max-w-6xl mx-auto mb-8 md:mb-2 pt-4 px-4">
+        {/* Logo */}
+        <a
+            href="/nitesh-portfolio-site/"    
+            className="flex items-center gap-2"
         >
-          {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
-        </button>
+        <img src="./nc-logo.png" alt="NC Logo" className="h-10 w-auto" />
+        </a>
+
+        {/* Navigation Links */}
+        <div className="flex items-center gap-6">
+          {/* <Link to="/blog" className="text-sky-600 dark:text-sky-300 hover:underline hover:text-sky-800 dark:hover:text-sky-100 transition duration-300 font-semibold text-lg">Blog</Link> */}
+
+          {/* Dark Mode Toggle */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-1 rounded-full text-sky-600 dark:text-sky-300 hover:bg-sky-100 dark:hover:bg-gray-800 transition duration-300"
+            aria-label="Toggle Dark Mode"
+          >
+            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Hero Section */}
