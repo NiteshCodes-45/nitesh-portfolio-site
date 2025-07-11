@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaMoon, FaSun } from "react-icons/fa";
 import FeaturedWork from "./FeaturedWork";
-import Hero from "./hero";
+import Hero from "./Hero";
 import ServiceOffered from "./ServiceOffered";
 import { Link } from "react-router-dom";
 
