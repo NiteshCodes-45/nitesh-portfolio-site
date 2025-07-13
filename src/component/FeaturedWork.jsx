@@ -91,7 +91,7 @@ export default function FeaturedWork() {
             <motion.img
               src={selectedImage.image}
               alt="Preview"
-              className="max-w-4xl max-h-[90vh] rounded-lg shadow-lg border border-white"
+              className="md:max-w-4xl max-h-[90vh] rounded-lg shadow-lg border border-white"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
