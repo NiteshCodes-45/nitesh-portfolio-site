@@ -47,7 +47,7 @@ export default function FeaturedWork() {
   );
 
   return (
-    <section className="mt-20 px-4 relative max-w-screen-xl mx-auto">
+    <section className="mt-20 md:px-6 px-1 relative max-w-screen-xl mx-auto">
       <h2 className="text-2xl font-semibold text-center mb-8 text-sky-600 dark:text-sky-400">
         Featured Work
       </h2>
@@ -65,7 +65,7 @@ export default function FeaturedWork() {
 
         <div
           ref={containerRef}
-          className="flex-1 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 px-2 sm:px-4"
+          className="flex-1 w-full grid grid-cols-1 md:grid-cols-3 gap-6 px-2 sm:px-4"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
@@ -77,7 +77,7 @@ export default function FeaturedWork() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
-                className="w-full max-w-sm sm:max-w-md md:max-w-none bg-white dark:bg-gray-800 shadow rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+                className="w-full bg-white dark:bg-gray-800 shadow rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 cursor-pointer"
                 onClick={() =>
                   setSelectedImage({
                     image: project.image,
