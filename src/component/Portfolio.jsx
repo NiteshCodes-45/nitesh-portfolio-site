@@ -29,7 +29,7 @@ export default function Portfolio() {
   }, [darkMode]);
 
   return (
-    <main className="min-h-screen px-6 pb-0 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+    <main className="min-h-screen px-3 md:px-6 pb-0 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
       <div className="flex justify-between items-center max-w-6xl mx-auto mb-8 md:mb-2 pt-4 px-4">
         {/* Logo */}
         <a
