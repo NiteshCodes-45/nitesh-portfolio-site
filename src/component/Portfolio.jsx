@@ -41,7 +41,7 @@ export default function Portfolio() {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6">
-          {/* <Link to="/blog" className="text-sky-600 dark:text-sky-300 hover:underline hover:text-sky-800 dark:hover:text-sky-100 transition duration-300 font-semibold text-lg">Blog</Link> */}
+          <Link to="/blog" className="text-sky-600 dark:text-sky-300 hover:underline hover:text-sky-800 dark:hover:text-sky-100 transition duration-300 font-semibold text-lg">Blog</Link>
 
           {/* Dark Mode Toggle */}
           <button
@@ -79,7 +79,7 @@ export default function Portfolio() {
         <h2 className="text-2xl font-semibold mb-2 text-sky-600 dark:text-sky-400">Let's Get in Touch</h2>
         <p className="mb-1 text-sky-700 dark:text-sky-300">Have a project in mind? I'm available for freelance work.</p>
         <div className="flex justify-center space-x-4 text-xl mt-4">
-          <a href="mailto:nitesh.chaughule5@gmail.com" className="text-sky-600 dark:text-sky-400" title="Email">
+          <a href="mailto:hello@niteshchaughule.dev" className="text-sky-600 dark:text-sky-400" title="Email">
             <FaEnvelope />
           </a>
           <a

@@ -1,23 +1,33 @@
 export default function Blogs() {
   const blogPosts = [
-    {
-      title: "Exploring My Village: Culture, Nature & Stories",
-      description:
-        "A personal journey through my village — its landscapes, traditions, and what makes it special.",
-      slug: "my-village-story.html",
-      image: "https://i.ytimg.com/vi/ZlxeX43GQKY/maxresdefault.jpg",
-      tags: ["Travel", "Culture", "Personal"],
-      date: "July 2025",
-    },
     // Add more blog posts here
+    {
+      title: "आमचा एक दिवस - प्राचीन लेण्यांच्या कुशीत",
+      description:"माझा पाहिलं प्रवास वर्णन एका प्राचीन बौद्ध लेण्यांनबद्दल... निसर्गाच्या सानिध्यात अनुभवलेला एक सुंदर दिवस...",
+      slug: "",
+      //slug: "first-travel-blog.html",
+      image: "./blog/images/bedse_caves_home.jpg",
+      tags: ["प्रवास", "लेणी"],
+      date: "जून २०२५",
+    },
   ];
+
+  // {
+  //   title: "Exploring My Village: Culture, Nature & Stories",
+  //   description:
+  //     "A personal journey through my village — its landscapes, traditions, and what makes it special.",
+  //   slug: "my-village-story.html",
+  //   image: "https://i.ytimg.com/vi/ZlxeX43GQKY/maxresdefault.jpg",
+  //   tags: ["Travel", "Culture", "Personal"],
+  //   date: "July 2025",
+  // },
 
   return (
     <div className="px-4 py-8 max-w-8xl mx-auto">
       <div className="flex justify-between items-center max-w-6xl mx-auto mb-12 md:mb-15 pt-4 px-4">
         {/* Logo */}
         <a
-            href="/nitesh-portfolio-site/"    
+            href="/"    
             className="flex items-center gap-2"
         >
         <img src="./nc-logo.png" alt="NC Logo" className="h-10 w-auto" />
@@ -26,16 +36,16 @@ export default function Blogs() {
         {/* Navigation Links */}
         <div className="flex items-center gap-6">
             <h3 className="text-3xl font-bold text-center text-sky-700 dark:text-sky-300 w-full max-w-2xl">
-                Blog Posts  
+                Blog Post  
             </h3>
         </div>
       </div>
       {/* Blog Grid */}
       <div
         className={`grid ${
-          blogPosts.length === 1
+          blogPosts.length == 1
             ? "grid-cols-1 place-items-center"
-            : "grid-cols-1 md:grid-cols-2 gap-8"
+            : "grid-cols-2 md:grid-cols-2 gap-8"
         }`}
       >
         {blogPosts.map((post, index) => (
@@ -47,7 +57,7 @@ export default function Blogs() {
             <img
               src={post.image}
               alt={post.title}
-              className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
 
             {/* Content */}
@@ -75,14 +85,16 @@ export default function Blogs() {
               <div className="mt-6 flex justify-between items-center">
                 <p className="text-xs text-gray-400">{post.date}</p>
 
-                <a
-                  href={`/nitesh-portfolio-site/blog/${post.slug}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm bg-sky-600 text-white px-3 py-1 rounded-md hover:bg-sky-700 transition"
-                >
-                  Read More →
-                </a>
+                {post.slug !== "" ? 
+                  <a
+                    href={`/blog/${post.slug}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm bg-sky-600 text-white px-3 py-1 rounded-md hover:bg-sky-700 transition"
+                  >
+                    पुढे वाचा →
+                  </a>
+                : <p className="text-xs text-gray-400">पूर्ण ब्लॉगसाठी थोडा वेळ द्या...</p> }  
               </div>
             </div>
           </div>
