@@ -157,28 +157,30 @@ export default function FeaturedWork() {
               setSelectedImage({ image: null, link: null, type: null })
             }
           >
+          <div className="flex justify-center items-center p-8">
             <motion.img
               src={selectedImage.image}
               alt="Preview"
               loading="lazy"
-              className="md:max-w-4xl max-h-[90vh] rounded-lg shadow-lg border border-white"
+              className="w-full max-w-4xl max-h-screen h-auto rounded-lg shadow-lg border border-white object-contain"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
             />
-            {selectedImage.link !== "#" && (
-              <motion.a
-                href={selectedImage.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-8 right-8 bg-sky-600 text-white px-4 py-2 rounded-md hover:bg-sky-700 transition"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {selectedImage.type === "web"
-                  ? "View Project"
-                  : "View Email Template"}
-              </motion.a>
-            )}
+          </div>
+          {selectedImage.link !== "#" && (
+            <motion.a
+              href={selectedImage.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-8 right-8 bg-sky-600 text-white px-4 py-2 rounded-md hover:bg-sky-700 transition"
+              onClick={(e) => e.stopPropagation()}
+            >
+            {selectedImage.type === "web"
+              ? "View Project"
+              : "View Email Template"}
+            </motion.a>
+          )}
           </motion.div>
         )}
       </AnimatePresence>
