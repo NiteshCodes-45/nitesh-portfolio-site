@@ -1,13 +1,21 @@
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectAllBlogs } from "../store/blogSlice";
+import { Link } from "react-router-dom";
+
 export default function Blogs() {
+  const blogs = useSelector(selectAllBlogs);
+  const [language, setLanguage] = useState('');
+
   const blogPosts = [
     // Add more blog posts here
     {
       title: "आमचा एक दिवस - प्राचीन लेण्यांच्या कुशीत",
-      description:"माझा पाहिलं प्रवास वर्णन एका प्राचीन बौद्ध लेण्यांनबद्दल... निसर्गाच्या सानिध्यात अनुभवलेला एक सुंदर दिवस...",
-      slug: "",
-      //slug: "first-travel-blog.html",
+      description:"माझं पाहिलं प्रवास वर्णन एका प्राचीन बौद्ध लेण्यांनबद्दल... निसर्गाच्या सानिध्यात अनुभवलेला एक सुंदर दिवस...",
+      //slug: "",
+      slug: "first-travel-blog.html",
       image: "./blog/images/bedse_caves_home.jpg",
-      tags: ["प्रवास", "लेणी"],
+      tags: ["प्रवासवर्णन", "लेणी"],
       date: "जून २०२५",
     },
   ];
@@ -43,19 +51,19 @@ export default function Blogs() {
       {/* Blog Grid */}
       <div
         className={`grid ${
-          blogPosts.length == 1
+          blogs.length == 1
             ? "grid-cols-1 place-items-center"
             : "grid-cols-2 md:grid-cols-2 gap-8"
         }`}
       >
-        {blogPosts.map((post, index) => (
+        {blogs.map((post, index) => (
           <div
             key={index}
             className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition group w-full max-w-xl mx-auto"
           >
             {/* Image */}
             <img
-              src={post.image}
+              src={post.thumbnail}
               alt={post.title}
               className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -83,18 +91,15 @@ export default function Blogs() {
 
               {/* Footer */}
               <div className="mt-6 flex justify-between items-center">
-                <p className="text-xs text-gray-400">{post.date}</p>
-
+                <p className="text-xs text-gray-400">{post.language == "English" ? post.eng_date : post.date }</p>
                 {post.slug !== "" ? 
-                  <a
-                    href={`/blog/${post.slug}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm bg-sky-600 text-white px-3 py-1 rounded-md hover:bg-sky-700 transition"
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="text-sm bg-sky-600 text-white hover:text-green px-3 py-1 rounded-md hover:bg-sky-700 transition"
                   >
-                    पुढे वाचा →
-                  </a>
-                : <p className="text-xs text-gray-400">पूर्ण ब्लॉगसाठी थोडा वेळ द्या...</p> }  
+                    { post.language == "English" ? "Read more" : "पुढे वाचा" } →
+                  </Link> 
+                : <p className="text-xs text-gray-400">{post.language == "English" ? "Wait For Full Blog..." : "पूर्ण ब्लॉगसाठी थोडा वेळ द्या..." }</p> }  
               </div>
             </div>
           </div>
