@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectAllBlogs } from "../store/blogSlice";
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const BlogContent = () => {
   const [comment, setComment] = useState('');
@@ -30,13 +32,24 @@ const BlogContent = () => {
   if (!blog) return <p>Blog not found</p>;
 
   return (
+    <>
+    <Helmet>
+        <title>{blog.title} | Nitesh Chaughule</title>
+        <meta name="description" content={blog.description} />
+        <meta property="og:title" content={blog.title} />
+        <meta property="og:description" content={blog.description} />
+        <meta property="og:image" content={window.location.origin + blog.image} />
+        <meta property="og:url" content={window.location.href} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <html lang="mr" />
+    </Helmet>
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans">
       <div className="max-w-3xl mx-auto">
         
         <div className="flex items-center px-4 mb-2 text-sm text-gray-600 space-x-1 whitespace-nowrap overflow-x-auto">
-          <a href="/" className="hover:underline text-gray-600">Home</a>
+          <Link to="/" className="hover:underline text-gray-600">Home</Link>
           <span className='text-2xl mb-1.5'>&rsaquo;</span>
-          <a href="#" className="hover:underline text-gray-600">Blog</a>
+          <Link to="/blog" className="hover:underline text-gray-600">Blog</Link>
           <span className='text-2xl mb-1.5'>&rsaquo;</span>
           <span className="text-gray-800 font-medium">{blog.title}</span>
         </div>
@@ -48,7 +61,7 @@ const BlogContent = () => {
 
         {/* Hero Image */}
         <section className="max-w-xl mx-auto mt-6 px-4">
-            <img src={blog.thumbnail} alt={blog.title} className="rounded-xl shadow-md mb-6 h-100" />
+            <img src={blog.thumbnail} alt={blog.title} className="rounded-xl shadow-md mb-6 h-100" loading="lazy" />
         </section>
 
         {/* Blog Content */}
@@ -107,6 +120,7 @@ const BlogContent = () => {
         </footer>
       </div>
     </div>
+    </>
   );
 };
 
