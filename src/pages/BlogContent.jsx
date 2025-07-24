@@ -57,7 +57,7 @@ const BlogContent = () => {
         ></main>
 
         {/* Comment Section */}
-        <section className="mt-12 px-8">
+        <section className="mt-12 px-8" hidden>
           <h2 className="text-left text-xl font-semibold mb-4">Leave a Comment</h2>
           <div className="bg-white rounded-lg shadow p-4 text-left">
             <input 
