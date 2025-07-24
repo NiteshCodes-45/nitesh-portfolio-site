@@ -7,13 +7,11 @@ import BlogContent from './pages/BlogContent.jsx';
 function App() {
   return (
     <>
-      <Router basename="/">
-        <Routes>
-          <Route path="/" element={<Portfolio />} />
-          <Route path="/blog" element={<Blogs />} />
-          <Route path="/blog/:slug" element={<BlogContent />} />
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/blog" element={<Blogs />} />
+        <Route path="/blog/:slug" element={<BlogContent />} />
+      </Routes>
     </>
   )
 }
