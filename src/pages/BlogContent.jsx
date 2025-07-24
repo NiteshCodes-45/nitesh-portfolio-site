@@ -36,7 +36,7 @@ const BlogContent = () => {
         <div className="flex items-center px-4 mb-2 text-sm text-gray-600 space-x-1 whitespace-nowrap overflow-x-auto">
           <a href="/" className="hover:underline text-gray-600">Home</a>
           <span className='text-2xl mb-1.5'>&rsaquo;</span>
-          <a href="/blog" className="hover:underline text-gray-600">Blog</a>
+          <a href="#" className="hover:underline text-gray-600">Blog</a>
           <span className='text-2xl mb-1.5'>&rsaquo;</span>
           <span className="text-gray-800 font-medium">{blog.title}</span>
         </div>
