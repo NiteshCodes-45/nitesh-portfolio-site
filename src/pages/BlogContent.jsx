@@ -1,33 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectAllBlogs } from "../store/blogSlice";
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Comments from './Comments';
 
 const BlogContent = () => {
-  const [comment, setComment] = useState('');
-  const [yourName, setYourName] = useState('');
-  const [commentsList, setCommentsList] = useState([]);
-
+  
   const { slug } = useParams();
   const blogs = useSelector(selectAllBlogs);
   const blog = blogs.find((b) => b.slug === slug);
-
-  const handleAddComment = () => {
-    if (comment.trim() && yourName.trim()) {
-      const newComment = {
-        yourName,
-        comment,
-        date: new Date().toLocaleString(),
-      };
-
-      setCommentsList([...commentsList, newComment]);
-      setComment('');
-      setYourName('');
-    }
-    console.log(commentsList);
-  };
 
   if (!blog) return <p>Blog not found</p>;
 
@@ -114,54 +97,8 @@ const BlogContent = () => {
           </a>
         </div>
 
-
-        {/* Comment Section */}
-        <section className="mt-12 px-8" hidden>
-          <h2 className="text-left text-xl font-semibold mb-4">Leave a Comment</h2>
-          <div className="bg-white rounded-lg shadow p-4 text-left">
-            <input 
-              name='name' 
-              type='text' 
-              placeholder="Your name"
-              value={yourName}
-              onChange={(e) => setYourName(e.target.value)}
-              className='w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-2' 
-              required
-            />
-            <textarea
-              value={comment}
-              onChange={(e) => setComment(e.target.value)}
-              placeholder="Share your thoughts..."
-              className="w-full border rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              rows={4}
-              required
-            />
-            <button
-              onClick={handleAddComment}
-              className="mt-3 bg-gradient-to-r from-sky-600 to-blue-600 text-white rounded-md hover:brightness-110 transition px-4 py-2"
-            >
-              Post Comment
-            </button>
-          </div>
-
-          {/* Comment List */}
-          <div className="mt-6 space-y-4 text-left">
-            {commentsList.length === 0 ? (
-              <p className="text-gray-500">No comments yet. Be the first!</p>
-            ) : (
-              commentsList.map((cmt, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white p-4 rounded-lg shadow-sm border border-gray-200"
-                >
-                  <p className="text-gray-500">Comment By {cmt.yourName} on {cmt.date}</p>
-                  <p className="text-gray-800">{cmt.comment}</p>
-                </div>
-              ))
-            )}
-          </div>
-        </section>
-
+        <Comments slug={slug} />
+        
         {/* Footer */}
         <footer className="bg-gradient-to-r from-sky-600 to-blue-600 text-white mt-14 py-6 text-center">
             <p className="text-ms mt-1">Made With ❤️ By Nitesh Chaughule</p>
