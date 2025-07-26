@@ -19,7 +19,7 @@ const projects = [
       title: "Responsive Invoice Email Template",
       description: "Clean and mobile-friendly invoice email designed for clear billing communication across devices.",
       image: "./projects/full-email-template.png",
-      link: "./portfolio-templates/invoice-email-template.html",
+      link: "/portfolio-templates/invoice-email-template.html",
       tags: ["HTML", "Tailwind", "Email"],
       type: "email",
     },
@@ -27,7 +27,7 @@ const projects = [
       title: "Product Launch Email Template",
       description: "Promotional email layout crafted to highlight new product features and drive user engagement.",
       image: "./projects/product-launch-ss.png",
-      link: "./portfolio-templates/product-launch-email-template.html",
+      link: "/portfolio-templates/product-launch-email-template.html",
       tags: ["UI", "Tailwind", "Email"],
       
     },
